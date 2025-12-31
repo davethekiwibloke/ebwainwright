@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="E. B. Wainwright — clean, heartfelt fiction across children’s stories and realistic science-fiction." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- TODO: Update once live -->
+  <link rel="canonical" href="https://ebwainwright.com/" />
+
+  <!-- Open Graph (for link previews) -->
+  <meta property="og:title" content="E. B. Wainwright" />
+  <meta property="og:description" content="Clean, heartfelt fiction: Bumble. D. Bear (children’s) + realistic science-fiction (forthcoming)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ebwainwright.com/" />
+  <!-- TODO: Add an image when you have one: /og-image.jpg (1200x630) -->
+  <!-- <meta property="og:image" content="https://ebwainwright.com/og-image.jpg" /> -->
+
+  <title>E. B. Wainwright — Author</title>
+
+  <style>
+    :root{
+      /* ===== Quick configuration (edit these first) ===== */
+      --site-name: "E. B. Wainwright";
+      --accent: #2b6cb0;
+      --bg: #0b0f14;
+      --panel: #101826;
+      --text: #e8eef6;
+      --muted: #b5c3d6;
+      --border: rgba(232,238,246,0.14);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 18px;
+      --maxw: 1024px;
+      --pad: 20px;
+      --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      font-family: var(--font);
+      background: radial-gradient(900px 600px at 20% 0%, rgba(43,108,176,0.22), transparent 60%),
+                  radial-gradient(900px 600px at 80% 20%, rgba(76,175,80,0.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a{ color: inherit; text-decoration-color: rgba(232,238,246,0.35); }
+    a:hover{ text-decoration-color: rgba(232,238,246,0.7); }
+
+    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 28px var(--pad) 54px; }
+    .skip{
+      position: absolute; left: -999px; top: 10px;
+      background: var(--panel); border: 1px solid var(--border);
+      padding: 10px 12px; border-radius: 10px;
+    }
+    .skip:focus{ left: 20px; z-index: 9999; }
+
+    header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(16,24,38,0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand{
+      display: flex; flex-direction: column; gap: 2px;
+      min-width: 180px;
+    }
+    .brand .name{ font-weight: 700; letter-spacing: 0.3px; }
+    .brand .tag{ font-size: 0.95rem; color: var(--muted); }
+
+    nav{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+    nav a{
+      display: inline-block;
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    nav a:hover{
+      border-color: var(--border);
+      color: var(--text);
+      background: rgba(232,238,246,0.05);
+    }
+
+    .hero{
+      margin-top: 22px;
+      padding: 26px 22px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(16,24,38,0.75), rgba(16,24,38,0.35));
+      box-shadow: var(--shadow);
+    }
+    .hero h1{
+      margin: 0 0 8px 0;
+      font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+      line-height: 1.15;
+    }
+    .hero p{
+      margin: 10px 0 0 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    .pill-row{
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(232,238,246,0.05);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .dot{
+      width: 9px; height: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(43,108,176,0.18);
+    }
+
+    main{ margin-top: 18px; }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (min-width: 900px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    section.card{
+      padding: 18px 18px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(16,24,38,0.6);
+      box-shadow: var(--shadow);
+    }
+    section.card h2{
+      margin: 0 0 6px;
+      font-size: 1.25rem;
+      letter-spacing: 0.2px;
+    }
+    .sub{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .book{
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: rgba(232,238,246,0.04);
+    }
+    .book .title{
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .book .meta{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .callout{
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(43,108,176,0.35);
+      background: rgba(43,108,176,0.10);
+      color: var(--text);
+    }
+    .callout strong{ color: var(--text); }
+
+    .about{
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(16,24,38,0.55);
+      box-shadow: var(--shadow);
+    }
+    .about h2{ margin: 0 0 8px; }
+    .about p{ margin: 8px 0 0; color: var(--muted); max-width: 80ch; }
+
+    .signup{
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: rgba(16,24,38,0.55);
+      box-shadow: var(--shadow);
+    }
+    .signup h2{ margin: 0 0 8px; }
+    .signup p{ margin: 8px 0 14px; color: var(--muted); max-width: 80ch; }
+
+    form{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      max-width: 560px;
+    }
+    @media (min-width: 700px){
+      form{ grid-template-columns: 1.2fr 0.8fr; }
+    }
+    label{ display: block; font-size: 0.95rem; color: var(--muted); margin-bottom: 6px; }
+    input[type="email"]{
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(232,238,246,0.06);
+      color: var(--text);
+      outline: none;
+    }
+    input[type="email"]::placeholder{ color: rgba(181,195,214,0.7); }
+    input[type="email"]:focus{
+      border-color: rgba(43,108,176,0.6);
+      box-shadow: 0 0 0 4px rgba(43,108,176,0.18);
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(43,108,176,0.55);
+      background: rgba(43,108,176,0.18);
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      user-select: none;
+      min-height: 44px;
+    }
+    .btn:hover{ background: rgba(43,108,176,0.26); }
+
+    .fineprint{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer{
+      margin-top: 22px;
+      padding: 16px 6px 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 0.92rem; }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="wrap">
+    <header>
+      <div class="brand" aria-label="Site identity">
+        <div class="name">E. B. Wainwright</div>
+        <div class="tag">Author — Children’s &amp; Realistic Science-Fiction</div>
+      </div>
+      <nav aria-label="Primary navigation">
+        <a href="#childrens">Children’s</a>
+        <a href="#scifi">Science-Fiction</a>
+        <a href="#about">About</a>
+        <a href="#updates">Updates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-label="Intro">
+      <h1>Clean, heartfelt fiction — for kids and grown-ups.</h1>
+      <p>
+        I write two streams of work: the <strong>Bumble. D. Bear</strong> children’s series, and grounded,
+        realistic science-fiction exploring memory, identity, and the quiet consequences of technology.
+      </p>
+      <div class="pill-row" aria-label="Highlights">
+        <span class="pill"><span class="dot" aria-hidden="true"></span> Bumble. D. Bear — in production</span>
+        <span class="pill"><span class="dot" aria-hidden="true"></span> Realistic sci-fi — in development</span>
+        <span class="pill"><span class="dot" aria-hidden="true"></span> New works in the pipeline</span>
+      </div>
+    </section>
+
+    <main id="content">
+      <div class="grid">
+        <section id="childrens" class="card" aria-label="Children’s books">
+          <h2>Children’s</h2>
+          <p class="sub">Warm, clean stories with heart — built for bedtime, giggles, and re-reads.</p>
+
+          <div class="book" role="group" aria-label="Bumble. D. Bear">
+            <p class="title">Bumble. D. Bear</p>
+            <p class="meta">
+              Status: awaiting illustrations • Self-publishing planned • More stories in the series to come.
+            </p>
+          </div>
+
+          <div class="callout" role="note" aria-label="Cross-reading note">
+            <strong>For parents:</strong> if you enjoy thoughtful, clean storytelling, you may also like my
+            realistic science-fiction — written for adults, but with the same care and emotional honesty.
+          </div>
+        </section>
+
+        <section id="scifi" class="card" aria-label="Realistic science-fiction">
+          <h2>Realistic science-fiction</h2>
+          <p class="sub">Plausible futures. Recognisable people. Technology that feels lived-in.</p>
+
+          <div class="book" role="group" aria-label="The Book of Cal">
+            <p class="title">The Book of Cal</p>
+            <p class="meta">
+              Status: in development • Realistic sci-fi • Updates will appear here as release plans firm up.
+            </p>
+          </div>
+
+          <div class="callout" role="note" aria-label="Cross-reading note">
+            <strong>For sci-fi readers:</strong> the Bumble. D. Bear books are gentle and clean — ideal if
+            you’ve got little ones in your orbit (or want something lighter between heavier reads).
+          </div>
+        </section>
+      </div>
+
+      <section id="about" class="about" aria-label="About the author">
+        <h2>About</h2>
+        <p>
+          E. B. Wainwright writes clean fiction across two lanes: children’s stories in the Bumble. D. Bear universe,
+          and grounded science-fiction that treats technology as intimate, practical, and morally complicated.
+          The goal is simple: believable characters, real emotion, and prose that earns its moments.
+        </p>
+      </section>
+
+      <section id="updates" class="signup" aria-label="Updates and mailing list">
+        <h2>Get updates</h2>
+        <p>
+          If you’d like release news, cover reveals, and occasional notes from the writing desk, join the list.
+          (No spam. Unsubscribe any time.)
+        </p>
+
+        <!--
+          TODO (mailing list):
+          - Replace action="#" with your provider endpoint (e.g., MailerLite/Mailchimp/etc).
+          - Or remove the form and use a simple link to your signup page.
+        -->
+        <form action="#" method="post">
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+          <div style="display:flex; align-items:end;">
+            <button class="btn" type="submit" aria-label="Join the mailing list">Join the list</button>
+          </div>
+        </form>
+
+        <div class="fineprint">
+          Prefer email contact only? No worries — just say hello at
+          <a href="mailto:hello@ebwainwright.com" class="mono">hello@ebwainwright.com</a>.
+        </div>
+      </section>
+
+      <section id="contact" class="about" aria-label="Contact">
+        <h2>Contact</h2>
+        <p>
+          General enquiries: <a class="mono" href="mailto:hello@ebwainwright.com">hello@ebwainwright.com</a><br />
+          <!-- Optional later: rights@ebwainwright.com -->
+        </p>
+        <p class="fineprint">
+          © <span id="y">2025</span> E. B. Wainwright. All rights reserved.
+        </p>
+      </section>
+    </main>
+
+    <footer aria-label="Footer">
+      <div>Byline: <strong>E. B. Wainwright</strong></div>
+      <div class="mono">ebwainwright.com • ebwainright.com → 301</div>
+    </footer>
+  </div>
+
+  <script>
+    // Keep the footer year current without editing the HTML each year.
+    (function () {
+      var y = document.getElementById("y");
+      if (y) y.textContent = String(new Date().getFullYear());
+    })();
+  </script>
+</body>
+</html>
